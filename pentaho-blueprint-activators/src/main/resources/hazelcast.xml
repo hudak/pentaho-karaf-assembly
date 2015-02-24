@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <bean id="hazelcast" class="com.hazelcast.core.Hazelcast" factory-method="newHazelcastInstance" destroy-method="shutdown" >
+        <argument ref="config"/>
+    </bean>
+
+    <bean class="com.hazelcast.config.Config" id="config">
+    </bean>
+
+    <service interface="com.hazelcast.core.HazelcastInstance" ref="hazelcast"/>
+</blueprint>

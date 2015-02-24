@@ -80,4 +80,9 @@
     </bundle>
   </feature>
 
+  <feature name="hazelcast" >
+    <bundle>mvn:com.hazelcast/hazelcast/3.4.1</bundle>
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
+  </feature>
+
 </features>
